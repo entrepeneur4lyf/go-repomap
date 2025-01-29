@@ -1,0 +1,365 @@
+=== RUN   TestRepoMap
+    repomap_test.go:46: Defines: map[AddComment:map[services/post_service.go:{}] AuthMiddleware:map[middleware/auth.go:{}] AuthService:map[services/auth_service.go:{}] BeforeCreate:map[models/post.go:{} models/user.go:{}] BeforeUpdate:map[models/post.go:{} models/user.go:{}] CleanupExpiredTokens:map[services/auth_service.go:{}] CreatePost:map[services/post_service.go:{}] CreateToken:map[services/auth_service.go:{}] CreateUser:map[services/user_service.go:{}] DeletePost:map[services/post_service.go:{}] DeleteUser:map[services/user_service.go:{}] GetComments:map[services/post_service.go:{}] GetPost:map[services/post_service.go:{}] GetPostsByUser:map[services/post_service.go:{}] GetUser:map[services/user_service.go:{}] GetUserID:map[services/auth_service.go:{}] Handle:map[middleware/auth.go:{} middleware/logging.go:{}] HandleHealth:map[handlers/health.go:{}] HandlePosts:map[handlers/posts.go:{}] HandleUsers:map[handlers/users.go:{}] HealthStatus:map[handlers/health.go:{}] ListPosts:map[services/post_service.go:{}] ListUsers:map[services/user_service.go:{}] LoggingMiddleware:map[middleware/logging.go:{}] NewAuthMiddleware:map[middleware/auth.go:{}] NewAuthService:map[services/auth_service.go:{}] NewLoggingMiddleware:map[middleware/logging.go:{}] NewPostService:map[services/post_service.go:{}] NewUserService:map[services/user_service.go:{}] Post:map[models/post.go:{}] PostComment:map[models/post.go:{}] PostHandler:map[handlers/posts.go:{}] PostService:map[services/post_service.go:{}] PostStatus:map[models/post.go:{}] RevokeToken:map[services/auth_service.go:{}] TokenInfo:map[services/auth_service.go:{}] UpdatePost:map[services/post_service.go:{}] UpdateUser:map[services/user_service.go:{}] User:map[models/user.go:{}] UserHandler:map[handlers/users.go:{}] UserProfile:map[models/user.go:{}] UserService:map[services/user_service.go:{}] Validate:map[models/post.go:{} models/user.go:{}] ValidateToken:map[services/auth_service.go:{}] WriteHeader:map[middleware/logging.go:{}] create:map[handlers/posts.go:{} handlers/users.go:{}] handle:map[handlers/posts.go:{} handlers/users.go:{}] list:map[handlers/posts.go:{} handlers/users.go:{}] main:map[main.go:{}] responseWriter:map[middleware/logging.go:{}]]
+    repomap_test.go:47: References: map[Add:[services/auth_service.go] AddComment:[services/post_service.go] After:[services/auth_service.go services/auth_service.go services/auth_service.go] AuthorID:[services/post_service.go models/post.go models/post.go models/post.go models/post.go] AvatarURL:[models/user.go] BeforeCreate:[models/user.go services/post_service.go services/post_service.go models/post.go models/post.go services/user_service.go] BeforeUpdate:[models/user.go services/post_service.go models/post.go models/post.go services/user_service.go] Bio:[models/user.go] Body:[handlers/posts.go handlers/users.go] CleanupExpiredTokens:[services/auth_service.go] Content:[models/post.go models/post.go models/post.go models/post.go] CreatePost:[services/post_service.go handlers/posts.go] CreateToken:[services/auth_service.go] CreateUser:[handlers/users.go services/user_service.go] CreatedAt:[models/user.go models/user.go models/post.go models/post.go models/post.go models/post.go] Decode:[handlers/posts.go handlers/users.go] Default:[middleware/logging.go] DeletePost:[services/post_service.go] DeleteUser:[services/user_service.go] Email:[models/user.go models/user.go] Encode:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/health.go] Error:[middleware/auth.go middleware/auth.go middleware/auth.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/health.go] ExpiresAt:[services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] Fatal:[main.go] FirstName:[models/user.go] Format:[services/auth_service.go] Get:[middleware/auth.go handlers/posts.go] GetComments:[services/post_service.go] GetPost:[services/post_service.go] GetPostsByUser:[services/post_service.go handlers/posts.go] GetUser:[services/user_service.go] GetUserID:[services/auth_service.go] Handle:[middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go main.go main.go main.go] HandleHealth:[main.go handlers/health.go] HandlePosts:[handlers/posts.go main.go] HandleUsers:[handlers/users.go main.go] HandlerFunc:[middleware/auth.go middleware/logging.go] Header:[middleware/auth.go handlers/health.go] Hour:[services/auth_service.go] ID:[models/user.go services/post_service.go services/post_service.go services/post_service.go models/post.go models/post.go services/user_service.go services/user_service.go services/user_service.go] LastName:[models/user.go] LastUpdated:[models/user.go] ListPosts:[services/post_service.go handlers/posts.go] ListUsers:[handlers/users.go services/user_service.go] ListenAndServe:[main.go] Lock:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go services/user_service.go] Method:[middleware/logging.go handlers/posts.go handlers/users.go handlers/health.go] MethodGet:[handlers/posts.go handlers/users.go handlers/health.go] MethodPost:[handlers/posts.go handlers/users.go] NewAuthMiddleware:[middleware/auth.go main.go] NewAuthService:[middleware/auth.go services/auth_service.go] NewDecoder:[handlers/posts.go handlers/users.go] NewEncoder:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/health.go] NewLoggingMiddleware:[middleware/logging.go main.go] NewPostService:[services/post_service.go handlers/posts.go] NewServeMux:[main.go] NewUserService:[handlers/users.go services/user_service.go] Now:[middleware/logging.go models/user.go models/user.go models/post.go models/post.go models/post.go models/post.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] Path:[middleware/logging.go] PostID:[services/post_service.go services/post_service.go models/post.go models/post.go] PostStatusArchived:[models/post.go] PostStatusDraft:[models/post.go models/post.go] PostStatusPublished:[models/post.go] Printf:[middleware/logging.go] Println:[main.go] Query:[handlers/posts.go] RFC3339:[services/auth_service.go] RLock:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go] RUnlock:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go] ResponseWriter:[middleware/logging.go middleware/logging.go] RevokeToken:[services/auth_service.go] ServeHTTP:[middleware/auth.go middleware/logging.go] Set:[handlers/health.go] Since:[middleware/logging.go] Status:[models/post.go models/post.go models/post.go handlers/health.go handlers/health.go] StatusBadRequest:[handlers/posts.go handlers/users.go] StatusCreated:[handlers/posts.go handlers/users.go] StatusMethodNotAllowed:[handlers/posts.go handlers/users.go handlers/health.go] StatusOK:[middleware/logging.go] StatusUnauthorized:[middleware/auth.go middleware/auth.go middleware/auth.go] Tags:[models/post.go] Title:[models/post.go models/post.go] TrimPrefix:[middleware/auth.go] URL:[middleware/logging.go handlers/posts.go] Unlock:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go services/user_service.go] UpdatePost:[services/post_service.go] UpdateUser:[services/user_service.go] UpdatedAt:[models/user.go models/user.go models/user.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go] UserID:[models/user.go services/auth_service.go services/auth_service.go services/auth_service.go] Username:[models/user.go models/user.go] Validate:[models/user.go models/post.go models/post.go] ValidateToken:[middleware/auth.go services/auth_service.go] Version:[handlers/health.go handlers/health.go] WriteHeader:[middleware/logging.go middleware/logging.go handlers/posts.go handlers/users.go] _:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/user_service.go services/user_service.go services/user_service.go] append:[services/post_service.go services/post_service.go services/post_service.go services/user_service.go] auth:[main.go main.go main.go] authHeader:[middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go] authService:[middleware/auth.go middleware/auth.go middleware/auth.go] code:[middleware/logging.go middleware/logging.go middleware/logging.go] comment:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go] comments:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go] create:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go] createdPost:[handlers/posts.go handlers/posts.go] createdUser:[handlers/users.go handlers/users.go] delete:[services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go] err:[handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go main.go main.go main.go] exists:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] h:[handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go] handle:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go] handler:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go] handlers:[main.go main.go main.go] http:[middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go main.go main.go handlers/health.go handlers/health.go handlers/health.go] id:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] info:[services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] json:[handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/health.go] len:[services/post_service.go services/user_service.go] list:[handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go] log:[middleware/logging.go main.go main.go] logger:[middleware/logging.go middleware/logging.go middleware/logging.go main.go main.go] m:[middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go] main:[main.go] make:[services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/user_service.go services/user_service.go] middleware:[middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go main.go main.go] mu:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] next:[middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go] now:[models/user.go models/user.go models/user.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go services/auth_service.go services/auth_service.go] p:[models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go] pc:[models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go models/post.go] post:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go handlers/posts.go handlers/posts.go handlers/posts.go] postID:[services/post_service.go services/post_service.go] postService:[handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go] posts:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go] r:[middleware/auth.go middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go middleware/logging.go middleware/logging.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/health.go handlers/health.go] router:[main.go main.go main.go main.go main.go] rw:[middleware/logging.go middleware/logging.go middleware/logging.go middleware/logging.go middleware/logging.go middleware/logging.go] s:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/post_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] services:[middleware/auth.go handlers/posts.go handlers/users.go] start:[middleware/logging.go middleware/logging.go] status:[handlers/health.go handlers/health.go] statusCode:[middleware/logging.go middleware/logging.go middleware/logging.go middleware/logging.go] strings:[middleware/auth.go] time:[middleware/logging.go middleware/logging.go models/user.go models/user.go models/post.go models/post.go models/post.go models/post.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] token:[middleware/auth.go middleware/auth.go middleware/auth.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] tokens:[services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go services/auth_service.go] u:[models/user.go models/user.go models/user.go models/user.go models/user.go models/user.go models/user.go models/user.go] user:[handlers/users.go handlers/users.go handlers/users.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] userID:[services/post_service.go services/post_service.go handlers/posts.go handlers/posts.go handlers/posts.go services/auth_service.go services/auth_service.go services/auth_service.go] userPosts:[services/post_service.go services/post_service.go services/post_service.go services/post_service.go] userService:[handlers/users.go handlers/users.go handlers/users.go handlers/users.go] users:[handlers/users.go handlers/users.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go services/user_service.go] w:[middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/auth.go middleware/logging.go middleware/logging.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/posts.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/users.go handlers/health.go handlers/health.go handlers/health.go handlers/health.go]]
+    repomap_test.go:48: Definitions: map[handlers/health.go/HandleHealth:[handlers/health.go:13 - HandleHealth (Definition)] handlers/health.go/HealthStatus:[handlers/health.go:8 - HealthStatus (Definition)] handlers/posts.go/HandlePosts:[handlers/posts.go:15 - HandlePosts (Definition)] handlers/posts.go/PostHandler:[handlers/posts.go:11 - PostHandler (Definition)] handlers/posts.go/create:[handlers/posts.go:44 - create (Definition)] handlers/posts.go/handle:[handlers/posts.go:22 - handle (Definition)] handlers/posts.go/list:[handlers/posts.go:33 - list (Definition)] handlers/users.go/HandleUsers:[handlers/users.go:15 - HandleUsers (Definition)] handlers/users.go/UserHandler:[handlers/users.go:11 - UserHandler (Definition)] handlers/users.go/create:[handlers/users.go:38 - create (Definition)] handlers/users.go/handle:[handlers/users.go:22 - handle (Definition)] handlers/users.go/list:[handlers/users.go:33 - list (Definition)] main.go/main:[main.go:11 - main (Definition)] middleware/auth.go/AuthMiddleware:[middleware/auth.go:10 - AuthMiddleware (Definition)] middleware/auth.go/Handle:[middleware/auth.go:21 - Handle (Definition)] middleware/auth.go/NewAuthMiddleware:[middleware/auth.go:14 - NewAuthMiddleware (Definition)] middleware/logging.go/Handle:[middleware/logging.go:20 - Handle (Definition)] middleware/logging.go/LoggingMiddleware:[middleware/logging.go:9 - LoggingMiddleware (Definition)] middleware/logging.go/NewLoggingMiddleware:[middleware/logging.go:13 - NewLoggingMiddleware (Definition)] middleware/logging.go/WriteHeader:[middleware/logging.go:50 - WriteHeader (Definition)] middleware/logging.go/responseWriter:[middleware/logging.go:45 - responseWriter (Definition)] models/post.go/BeforeCreate:[models/post.go:37 - BeforeCreate (Definition) models/post.go:54 - BeforeCreate (Definition)] models/post.go/BeforeUpdate:[models/post.go:46 - BeforeUpdate (Definition) models/post.go:60 - BeforeUpdate (Definition)] models/post.go/Post:[models/post.go:13 - Post (Definition)] models/post.go/PostComment:[models/post.go:24 - PostComment (Definition)] models/post.go/PostStatus:[models/post.go:5 - PostStatus (Definition)] models/post.go/Validate:[models/post.go:33 - Validate (Definition) models/post.go:50 - Validate (Definition)] models/user.go/BeforeCreate:[models/user.go:26 - BeforeCreate (Definition)] models/user.go/BeforeUpdate:[models/user.go:32 - BeforeUpdate (Definition)] models/user.go/User:[models/user.go:5 - User (Definition)] models/user.go/UserProfile:[models/user.go:13 - UserProfile (Definition)] models/user.go/Validate:[models/user.go:22 - Validate (Definition)] services/auth_service.go/AuthService:[services/auth_service.go:13 - AuthService (Definition)] services/auth_service.go/CleanupExpiredTokens:[services/auth_service.go:85 - CleanupExpiredTokens (Definition)] services/auth_service.go/CreateToken:[services/auth_service.go:46 - CreateToken (Definition)] services/auth_service.go/GetUserID:[services/auth_service.go:73 - GetUserID (Definition)] services/auth_service.go/NewAuthService:[services/auth_service.go:18 - NewAuthService (Definition)] services/auth_service.go/RevokeToken:[services/auth_service.go:66 - RevokeToken (Definition)] services/auth_service.go/TokenInfo:[services/auth_service.go:8 - TokenInfo (Definition)] services/auth_service.go/ValidateToken:[services/auth_service.go:24 - ValidateToken (Definition)] services/post_service.go/AddComment:[services/post_service.go:89 - AddComment (Definition)] services/post_service.go/CreatePost:[services/post_service.go:22 - CreatePost (Definition)] services/post_service.go/DeletePost:[services/post_service.go:52 - DeletePost (Definition)] services/post_service.go/GetComments:[services/post_service.go:98 - GetComments (Definition)] services/post_service.go/GetPost:[services/post_service.go:31 - GetPost (Definition)] services/post_service.go/GetPostsByUser:[services/post_service.go:76 - GetPostsByUser (Definition)] services/post_service.go/ListPosts:[services/post_service.go:65 - ListPosts (Definition)] services/post_service.go/NewPostService:[services/post_service.go:15 - NewPostService (Definition)] services/post_service.go/PostService:[services/post_service.go:9 - PostService (Definition)] services/post_service.go/UpdatePost:[services/post_service.go:39 - UpdatePost (Definition)] services/user_service.go/CreateUser:[services/user_service.go:20 - CreateUser (Definition)] services/user_service.go/DeleteUser:[services/user_service.go:56 - DeleteUser (Definition)] services/user_service.go/GetUser:[services/user_service.go:35 - GetUser (Definition)] services/user_service.go/ListUsers:[services/user_service.go:68 - ListUsers (Definition)] services/user_service.go/NewUserService:[services/user_service.go:14 - NewUserService (Definition)] services/user_service.go/UpdateUser:[services/user_service.go:43 - UpdateUser (Definition)] services/user_service.go/UserService:[services/user_service.go:9 - UserService (Definition)]]
+    repomap_test.go:68: Found definition: HandlePosts
+    repomap_test.go:68: Found definition: User
+    repomap_test.go:68: Found definition: NewPostService
+    repomap_test.go:68: Found definition: main
+    repomap_test.go:68: Found definition: PostComment
+    repomap_test.go:68: Found definition: NewUserService
+    repomap_test.go:68: Found definition: NewAuthService
+    repomap_test.go:68: Found definition: HandleUsers
+    repomap_test.go:68: Found definition: AuthMiddleware
+    repomap_test.go:68: Found definition: Post
+    repomap_test.go:68: Found definition: HandleHealth
+    repomap_test.go:94: Found reference: json
+    repomap_test.go:94: Found reference: HandlePosts
+    repomap_test.go:94: Found reference: http
+    repomap_test.go:94: Found reference: log
+    repomap_test.go:94: Found reference: HandleUsers
+    repomap_test.go:94: Found reference: time
+    repomap_test.go:106: Got 60 ranked tags
+    repomap_test.go:108: Ranked tag: handlers/posts.go:11 - PostHandler (Definition)
+    repomap_test.go:108: Ranked tag: handlers/posts.go:15 - HandlePosts (Definition)
+    repomap_test.go:108: Ranked tag: handlers/posts.go:22 - handle (Definition)
+    repomap_test.go:108: Ranked tag: handlers/posts.go:33 - list (Definition)
+    repomap_test.go:108: Ranked tag: handlers/posts.go:44 - create (Definition)
+    repomap_test.go:108: Ranked tag: handlers/users.go:11 - UserHandler (Definition)
+    repomap_test.go:108: Ranked tag: handlers/users.go:15 - HandleUsers (Definition)
+    repomap_test.go:108: Ranked tag: handlers/users.go:22 - handle (Definition)
+    repomap_test.go:108: Ranked tag: handlers/users.go:33 - list (Definition)
+    repomap_test.go:108: Ranked tag: handlers/users.go:38 - create (Definition)
+    repomap_test.go:108: Ranked tag: middleware/logging.go:9 - LoggingMiddleware (Definition)
+    repomap_test.go:108: Ranked tag: middleware/logging.go:13 - NewLoggingMiddleware (Definition)
+    repomap_test.go:108: Ranked tag: middleware/logging.go:20 - Handle (Definition)
+    repomap_test.go:108: Ranked tag: middleware/logging.go:45 - responseWriter (Definition)
+    repomap_test.go:108: Ranked tag: middleware/logging.go:50 - WriteHeader (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:9 - PostService (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:15 - NewPostService (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:22 - CreatePost (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:31 - GetPost (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:39 - UpdatePost (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:52 - DeletePost (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:65 - ListPosts (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:76 - GetPostsByUser (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:89 - AddComment (Definition)
+    repomap_test.go:108: Ranked tag: services/post_service.go:98 - GetComments (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:9 - UserService (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:14 - NewUserService (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:20 - CreateUser (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:35 - GetUser (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:43 - UpdateUser (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:56 - DeleteUser (Definition)
+    repomap_test.go:108: Ranked tag: services/user_service.go:68 - ListUsers (Definition)
+    repomap_test.go:108: Ranked tag: middleware/auth.go:10 - AuthMiddleware (Definition)
+    repomap_test.go:108: Ranked tag: middleware/auth.go:14 - NewAuthMiddleware (Definition)
+    repomap_test.go:108: Ranked tag: middleware/auth.go:21 - Handle (Definition)
+    repomap_test.go:108: Ranked tag: models/user.go:5 - User (Definition)
+    repomap_test.go:108: Ranked tag: models/user.go:13 - UserProfile (Definition)
+    repomap_test.go:108: Ranked tag: models/user.go:22 - Validate (Definition)
+    repomap_test.go:108: Ranked tag: models/user.go:26 - BeforeCreate (Definition)
+    repomap_test.go:108: Ranked tag: models/user.go:32 - BeforeUpdate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:5 - PostStatus (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:13 - Post (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:24 - PostComment (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:33 - Validate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:37 - BeforeCreate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:46 - BeforeUpdate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:50 - Validate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:54 - BeforeCreate (Definition)
+    repomap_test.go:108: Ranked tag: models/post.go:60 - BeforeUpdate (Definition)
+    repomap_test.go:108: Ranked tag: handlers/health.go:8 - HealthStatus (Definition)
+    repomap_test.go:108: Ranked tag: handlers/health.go:13 - HandleHealth (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:8 - TokenInfo (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:13 - AuthService (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:18 - NewAuthService (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:24 - ValidateToken (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:46 - CreateToken (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:66 - RevokeToken (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:73 - GetUserID (Definition)
+    repomap_test.go:108: Ranked tag: services/auth_service.go:85 - CleanupExpiredTokens (Definition)
+    repomap_test.go:108: Ranked tag: main.go:11 - main (Definition)
+[Analyser] Ranking tags...
+[Analyser] tags::len(60)
+[Tree] Finding best tree...
+Initial conditions:
+  Number of tags: 60
+  Max map tokens: 1024
+
+Iteration 1:
+  Bounds: [0, 60]
+  Middle: 40
+  Tree tokens: 1520
+  Decreasing upper bound
+  Next middle: 19
+
+Iteration 2:
+  Bounds: [0, 39]
+  Middle: 19
+  Tree tokens: 793
+  New best tree found!
+    Previous best: 0 tokens
+    New best: 793 tokens
+  Increasing lower bound
+  Next middle: 29
+
+Iteration 3:
+  Bounds: [20, 39]
+  Middle: 29
+  Tree tokens: 1143
+  Decreasing upper bound
+  Next middle: 24
+
+Iteration 4:
+  Bounds: [20, 28]
+  Middle: 24
+  Tree tokens: 1101
+  Decreasing upper bound
+  Next middle: 21
+
+Iteration 5:
+  Bounds: [20, 23]
+  Middle: 21
+  Tree tokens: 911
+  New best tree found!
+    Previous best: 793 tokens
+    New best: 911 tokens
+  Increasing lower bound
+  Next middle: 22
+
+Iteration 6:
+  Bounds: [22, 23]
+  Middle: 22
+  Tree tokens: 971
+  New best tree found!
+    Previous best: 911 tokens
+    New best: 971 tokens
+  Increasing lower bound
+  Next middle: 23
+
+Iteration 7:
+  Bounds: [23, 23]
+  Middle: 23
+  Tree tokens: 1036
+  Decreasing upper bound
+  Next middle: 22
+
+Search completed:
+  Best tree tokens: 971
+  Final bounds: [23, 22]
+Repomap: 0k tokens
+    repomap_test.go:121: Generated repo map:
+        
+        testdata/web/handlers/users.go:
+        ⋮...
+        |)
+        |
+        |type UserHandler struct {
+        |       userService *services.UserService
+        |}
+        |
+        |func HandleUsers() http.HandlerFunc {
+        |       handler := &UserHandler{
+        |               userService: services.NewUserService(),
+        |       }
+        |       return handler.handle
+        |}
+        |
+        |func (h *UserHandler) handle(w http.ResponseWriter, r *http.Request) {
+        |       switch r.Method {
+        |       case http.MethodGet:
+        |               h.list(w, r)
+        |       case http.MethodPost:
+        |               h.create(w, r)
+        |       default:
+        |               http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+        |       }
+        |}
+        |
+        |func (h *UserHandler) list(w http.ResponseWriter, r *http.Request) {
+        |       users := h.userService.ListUsers()
+        |       json.NewEncoder(w).Encode(users)
+        ⋮...
+        |func (h *UserHandler) create(w http.ResponseWriter, r *http.Request) {
+        |       var user models.User
+        |       if err := json.NewDecoder(r.Body).Decode(&user); err != nil {
+        |               http.Error(w, err.Error(), http.StatusBadRequest)
+        |               return
+        |       }
+        |
+        |       createdUser := h.userService.CreateUser(user)
+        |       w.WriteHeader(http.StatusCreated)
+        |       json.NewEncoder(w).Encode(createdUser)
+        ⋮...
+        
+        testdata/web/middleware/logging.go:
+        ⋮...
+        |type LoggingMiddleware struct {
+        |       logger *log.Logger
+        |}
+        |
+        |func NewLoggingMiddleware() func(http.Handler) http.Handler {
+        |       middleware := &LoggingMiddleware{
+        |               logger: log.Default(),
+        |       }
+        |       return middleware.Handle
+        ⋮...
+        |func (m *LoggingMiddleware) Handle(next http.Handler) http.Handler {
+        |       return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+        |               start := time.Now()
+        |
+        |               // Create a custom response writer to capture the status code
+        |               rw := &responseWriter{
+        |                       ResponseWriter: w,
+        |                       statusCode:     http.StatusOK,
+        |               }
+        |
+        |               // Call the next handler
+        |               next.ServeHTTP(rw, r)
+        |
+        |               // Log the request details
+        |               m.logger.Printf(
+        |                       "Method: %s | Path: %s | Status: %d | Duration: %v",
+        |                       r.Method,
+        |                       r.URL.Path,
+        |                       rw.statusCode,
+        |                       time.Since(start),
+        ⋮...
+        
+        testdata/web/services/post_service.go:
+        ⋮...
+        |)
+        |
+        |type PostService struct {
+        |       posts    map[string]models.Post
+        |       comments map[string][]models.PostComment
+        |       mu       sync.RWMutex
+        |}
+        |
+        |func NewPostService() *PostService {
+        |       return &PostService{
+        |               posts:    make(map[string]models.Post),
+        |               comments: make(map[string][]models.PostComment),
+        |       }
+        |}
+        |
+        ⋮...
+        |func (s *PostService) UpdatePost(post models.Post) (models.Post, bool) {
+        |       s.mu.Lock()
+        |       defer s.mu.Unlock()
+        |
+        |       if _, exists := s.posts[post.ID]; !exists {
+        |               return models.Post{}, false
+        |       }
+        |
+        |       post.BeforeUpdate()
+        |       s.posts[post.ID] = post
+        |       return post, true
+        |}
+        |
+        ⋮...
+        
+        testdata/web/services/post_service.go:
+        ⋮...
+        |)
+        |
+        |type PostService struct {
+        |       posts    map[string]models.Post
+        |       comments map[string][]models.PostComment
+        |       mu       sync.RWMutex
+        |}
+        |
+        |func NewPostService() *PostService {
+        |       return &PostService{
+        |               posts:    make(map[string]models.Post),
+        |               comments: make(map[string][]models.PostComment),
+        |       }
+        |}
+        |
+        |func (s *PostService) CreatePost(post models.Post) models.Post {
+        |       s.mu.Lock()
+        |       defer s.mu.Unlock()
+        |
+        |       post.BeforeCreate()
+        |       s.posts[post.ID] = post
+        |       return post
+        |}
+        |
+        |func (s *PostService) GetPost(id string) (models.Post, bool) {
+        |       s.mu.RLock()
+        |       defer s.mu.RUnlock()
+        |
+        |       post, exists := s.posts[id]
+        |       return post, exists
+        |}
+        |
+        |func (s *PostService) UpdatePost(post models.Post) (models.Post, bool) {
+        |       s.mu.Lock()
+        |       defer s.mu.Unlock()
+        |
+        |       if _, exists := s.posts[post.ID]; !exists {
+        |               return models.Post{}, false
+        |       }
+        |
+        |       post.BeforeUpdate()
+        |       s.posts[post.ID] = post
+        |       return post, true
+        |}
+        |
+        |func (s *PostService) DeletePost(id string) bool {
+        |       s.mu.Lock()
+        |       defer s.mu.Unlock()
+        |
+        |       if _, exists := s.posts[id]; !exists {
+        |               return false
+        |       }
+        |
+        |       delete(s.posts, id)
+        |       delete(s.comments, id)
+        |       return true
+        |}
+        |
+        |func (s *PostService) ListPosts() []models.Post {
+        |       s.mu.RLock()
+        |       defer s.mu.RUnlock()
+        |
+        |       posts := make([]models.Post, 0, len(s.posts))
+        |       for _, post := range s.posts {
+        |               posts = append(posts, post)
+        |       }
+        |       return posts
+        ⋮...
+        
+--- PASS: TestRepoMap (0.03s)
+=== RUN   TestLanguageSupport
+--- PASS: TestLanguageSupport (0.00s)
+=== RUN   TestFileExtensionMapping
+=== RUN   TestFileExtensionMapping/test.go
+=== RUN   TestFileExtensionMapping/test.js
+=== RUN   TestFileExtensionMapping/test.ts
+=== RUN   TestFileExtensionMapping/test.py
+=== RUN   TestFileExtensionMapping/test.java
+=== RUN   TestFileExtensionMapping/test.rb
+=== RUN   TestFileExtensionMapping/test.rs
+=== RUN   TestFileExtensionMapping/test.cpp
+=== RUN   TestFileExtensionMapping/test.cs
+=== RUN   TestFileExtensionMapping/test.php
+--- PASS: TestFileExtensionMapping (0.00s)
+    --- PASS: TestFileExtensionMapping/test.go (0.00s)
+    --- PASS: TestFileExtensionMapping/test.js (0.00s)
+    --- PASS: TestFileExtensionMapping/test.ts (0.00s)
+    --- PASS: TestFileExtensionMapping/test.py (0.00s)
+    --- PASS: TestFileExtensionMapping/test.java (0.00s)
+    --- PASS: TestFileExtensionMapping/test.rb (0.00s)
+    --- PASS: TestFileExtensionMapping/test.rs (0.00s)
+    --- PASS: TestFileExtensionMapping/test.cpp (0.00s)
+    --- PASS: TestFileExtensionMapping/test.cs (0.00s)
+    --- PASS: TestFileExtensionMapping/test.php (0.00s)
+=== RUN   TestQueryParsing
+=== RUN   TestQueryParsing/Go
+=== RUN   TestQueryParsing/JavaScript
+--- PASS: TestQueryParsing (0.00s)
+    --- PASS: TestQueryParsing/Go (0.00s)
+    --- PASS: TestQueryParsing/JavaScript (0.00s)
+PASS
